@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/18 13:28:07 by jschreye          #+#    #+#             */
-/*   Updated: 2021/10/21 17:23:50 by jschreye         ###   ########.fr       */
+/*   Created: 2021/10/22 10:47:16 by jschreye          #+#    #+#             */
+/*   Updated: 2021/10/22 10:58:38 by jschreye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*str;
-	int		t;
+	char	c;
 
-	if (!s1 || !s2)
-		return (NULL);
-	t = ft_strlen(s1) + ft_strlen(s2) + 1;
-	str = malloc(t * sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s1, t);
-	ft_strlcat(str, s2, t);
-	return (str);
+	c = '\n';
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd(c, fd);
 }

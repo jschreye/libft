@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/18 13:28:07 by jschreye          #+#    #+#             */
-/*   Updated: 2021/10/21 17:23:50 by jschreye         ###   ########.fr       */
+/*   Created: 2021/10/22 08:32:03 by jschreye          #+#    #+#             */
+/*   Updated: 2021/10/22 10:19:23 by jschreye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
-	int		t;
+	char			*str;
+	unsigned int	count;
 
-	if (!s1 || !s2)
+	count = 0;
+	if (!s)
 		return (NULL);
-	t = ft_strlen(s1) + ft_strlen(s2) + 1;
-	str = malloc(t * sizeof(char));
+	str = malloc(ft_strlen(s) + 1 * sizeof(char));
 	if (!str)
 		return (NULL);
-	ft_strlcpy(str, s1, t);
-	ft_strlcat(str, s2, t);
+	while (count < ft_strlen(s))
+	{
+		str[count] = f(count, s[count]);
+		count++;
+	}
+	str[count] = '\0';
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 14:02:51 by jschreye          #+#    #+#             */
-/*   Updated: 2021/10/19 10:32:44 by jschreye         ###   ########.fr       */
+/*   Updated: 2021/10/21 17:22:57 by jschreye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,9 +17,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	fin;
 
 	deb = 0;
-	fin = ft_strlen(s1);
-	if (!s1 || !set)
+	if (!s1)
 		return (NULL);
+	fin = ft_strlen(s1);
 	while (ft_strchr(set, s1[deb]))
 		deb++;
 	while (ft_strrchr(set, s1[fin - 1]))
