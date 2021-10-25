@@ -6,7 +6,7 @@
 /*   By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 12:49:45 by jschreye          #+#    #+#             */
-/*   Updated: 2021/10/20 09:02:20 by jschreye         ###   ########.fr       */
+/*   Updated: 2021/10/22 12:04:27 by jschreye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -39,8 +39,8 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 }
 /*int main()
 {
-   char dest[] = "";
-  const char src[]  = "";
+   char dest[] = "hdasdldnflfd";
+  const char src[]  = "hellolespote";
 
    printf("Before memmove dest = %s, src = %s\n", dest, src);
    ft_memmove(dest, src, 9);
