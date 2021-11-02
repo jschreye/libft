@@ -13,13 +13,12 @@ all: $(NAME)
 $(NAME) : $(OBJ)
 	ar rsc	$(NAME) $(OBJ)
 	
-/*$(NAME) : $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)*/
-
 clean:
-	rm -f *.o
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

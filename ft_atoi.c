@@ -6,12 +6,12 @@
 /*   By: jschreye <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 12:58:50 by jschreye          #+#    #+#             */
-/*   Updated: 2021/10/19 17:30:37 by jschreye         ###   ########.fr       */
+/*   Updated: 2021/10/28 15:55:17 by jschreye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	is_white_space(char *c)
+static int	is_white_space(char *c)
 {
 	if (*c == '\n' || *c == '\t' || *c == '\r'
 		|| *c == '\v' || *c == '\f' || *c == ' ')
